@@ -8,10 +8,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineProps } from 'vue';
 
-const props = defineProps({
+const {imageSrc, title, description} = defineProps({
   imageSrc: String,
   title: String,
   description: String

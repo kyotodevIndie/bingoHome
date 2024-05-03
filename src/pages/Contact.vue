@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import Navbar from '../components/Navbar.vue'
-import Features from '../components/Features.vue'
-import LiveCasino from '../components/LiveCasino.vue'
-import Footer from '../components/Footer.vue'
-import ContactCard from '../components/ContactCard.vue'
 </script>
 
 <template>
-        <Navbar />
       <div class="w-full bg-tertiary flex flex-col items-center justify-center pt-60 pb-32 text-secondary gap-12">
         <div class="text-center">
           <h1 class="text-5xl font-bungee">Contact us</h1>
@@ -33,5 +27,4 @@ import ContactCard from '../components/ContactCard.vue'
           </span>
         </div>
       </div>
-      <Footer />
 </template>

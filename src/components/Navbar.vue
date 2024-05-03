@@ -17,9 +17,9 @@
             <li>
               <button
                 data-dropdown-toggle="dropdownNavbar"
-                data-dropdown-trigger="hover"
                 class="flex items-center justify-between w-full py-2 px-3  text-secondary "
-              >
+                >
+                <!-- data-dropdown-trigger="hover" -->
                 Live Games
                 <svg
                   class="w-2.5 h-2.5 ms-3"
@@ -41,28 +41,28 @@
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
+                    <router-link
+                      to="game/1"
                       class="block px-4 py-2 hover:bg-primary hover:text-secondary"
                     >
-                      Game 1
-                    </a>
+                      Roleta
+                    </router-link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <router-link
+                      to="game/2"
                       class="block px-4 py-2 hover:bg-primary hover:text-secondary"
                     >
-                      Game 2
-                    </a>
+                      Bingo
+                    </router-link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <router-link
+                      to="game/3"
                       class="block px-4 py-2 hover:bg-primary hover:text-secondary"
                     >
-                      Game 3
-                    </a>
+                      Roda
+                    </router-link>
                   </li>
                 </ul>
               </div>

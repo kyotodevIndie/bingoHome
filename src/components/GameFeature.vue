@@ -8,7 +8,7 @@
     </div>
  <div class="w-full xl:w-1/2 text-left text-gray-200 grid gap-6 mb-6 md:grid-cols-3 items-center justify-center">
      
-        <div class="w-full flex flex-col items-start justify-center gap-2 max-w-[23.75rem]" v-for="feature in gamefeatures" :key="feature">
+        <div class="w-full flex flex-col items-start justify-center gap-2 max-w-[23.75rem]" v-for="(feature, index) in gamefeatures" :key="index">
                 <img
                   class=""
                   alt=""

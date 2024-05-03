@@ -1,6 +1,7 @@
+
+
 <template>
   <div class="bg-tertiary text-secondary">
-    <Navbar />
    
 
     <div class=" pt-20 pb-0 flex flex-col items-center justify-center">
@@ -49,15 +50,13 @@ experience. </p>
 
 </div>
 
-    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
+//@ts-nocheck
 import { ref, onMounted } from 'vue';
 import GameFeature from '../components/GameFeature.vue';
-import Navbar from "../components/Navbar.vue";
-import Footer from "../components/Footer.vue";
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
@@ -85,8 +84,8 @@ const gameInfos: any = {
 
 
 onMounted(() => {
-
-  gameInfo.value = gameInfos[route.params.id]
+const id: any = route.params.id
+  gameInfo.value = gameInfos[id]
 
   var config = {
 	"source": {
@@ -115,7 +114,7 @@ onMounted(() => {
 
 };
 
-    var player = new NanoPlayer("playerDiv");
+    var player = new window.NanoPlayer("playerDiv");
     player.setup(config).then(function (config: any) {
         console.log("setup success");
         console.log("config: " + JSON.stringify(config, undefined, 4));
