@@ -53,7 +53,7 @@ const closeDrawer = () => {
         <label for="drawer-right" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
 	<section class="menu-section">
 		<ul class="menu-items">
-			<li class="menu-item" @click="closeDrawer" :to="{ name: 'home' }" >Home</li>
+			<RouterLink class="menu-item" @click="closeDrawer" :to="{ name: 'home' }" >Home</RouterLink>
 			<li>
 				<input type="checkbox" id="menu-1" class="menu-toggle" />
 				<label class="menu-item justify-between" for="menu-1">
