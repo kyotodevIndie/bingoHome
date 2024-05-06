@@ -20,11 +20,11 @@ import ContactCard from '../components/ContactCard.vue';
           <span>
             email us at 
             <a
-              href="mailto:sales@bananaGomes.com"
+              href="mailto:talk@banana.games"
               target="_blank"
               rel="noreferrer"
             >
-              <b>sales@bananaGomes.com</b>
+              <b>talk@banana.games</b>
             </a>
           </span>
         </div>

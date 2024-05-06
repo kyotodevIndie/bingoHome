@@ -14,11 +14,6 @@
           alt="Banner"
           class="w-[340px] max-md:mt-10"
         />
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/5e5cc49318a830bd312aaa2e1b4182c240466538b8828df8b0bb4380731c3104?apiKey=1c64a5536cb84c2d95c98300c1c7a69b&"
-          alt="Ministry of Finance logo"
-          class="w-[90px]"
-        />
       </div>
     </header>
     <main class="mt-12 max-w-full w-[1109px] max-md:mt-10">
@@ -51,17 +46,11 @@
                   <p>Bingo</p>
                   <p>Roda</p>
               </div>
-              <div class="flex leading-7 gap-2 text-zinc-400 max-md:mt-10 flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
-                  <h2 class="text-lg font-extrabold leading-7 text-secondary mb-3">Information</h2>
-                  <p>Privacy Policy</p>
-                  <p>Terms & Conditions</p>
-                  <p>Responsible Gaming</p>
-              </div>
               <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
                 <div class="flex flex-col grow text-zinc-400 max-md:mt-10">
                   <h2 class="text-base font-extrabold leading-7 gap-2 text-secondary">Contacts</h2>
                   <p class="mt-8 text-sm leading-7">Drop us a line and we'll happily answer all your questions.</p>
-                  <div class="mt-6 text-sm leading-5">sales@bananaGomes.com</div>
+                  <div class="mt-6 text-sm leading-5">talk@banana.games</div>
                 </div>
               </div>
             </div>

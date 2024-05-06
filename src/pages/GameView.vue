@@ -1,6 +1,85 @@
+<script setup lang="ts">
+//@ts-nocheck
+import { ref, onMounted, watch } from 'vue';
+import GameFeature from '../components/GameFeature.vue';
+import { onBeforeRouteLeave, useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const gameInfo = ref<any>({id:'', name: ''});
+
+const gameInfos: any = {
+  1 : {
+    name: "Roleta Ao vivo",
+    id: "85fd764e-72aa-40a0-b865-cac69725870b"
+  },
+  2: {
+    name: "Bingo",
+    id: "936e2f50-d607-4dd7-8088-57af0218137a",
+  },
+  3: {
+    name: "Roda",
+    id: "2dfe08e8-f41d-40d3-992d-ecbc8eddf665"
+  }
+}
+
+watch(
+  () => route.params,
+  (toParams) => createNanoPlayer(toParams.id)
+);
+
+
+onMounted(() => {
+  createNanoPlayer(route.params.id)
+})
+
+
+const createNanoPlayer = (id: any) => {
+  
+  gameInfo.value = gameInfos[id]
+
+  var config = {
+	"source": {
+		"group": {
+			"id": gameInfo.value.id,
+			"apiurl": "https://bintu.nanocosmos.de"
+		},
+		"options": {
+			"adaption": {
+				"rule": "deviationOfMean2"
+			}
+		},
+		"startIndex": 0
+	},
+	"playback": {
+		"latencyControlMode": "classic",
+		"autoplay": true,
+		"automute": true,
+		"faststart": true
+	},
+	"style": {
+		"width": "auto",
+		"height": "auto",
+    "controls": false,
+	},
+
+};
+
+    var player = new window.NanoPlayer("playerDiv");
+    player.setup(config).then(function (config: any) {
+        console.log("setup success");
+        console.log("config: " + JSON.stringify(config, undefined, 4));
+    }, function (error: any) {
+        alert(error.message);
+    });
+}
+
+
+</script>
 
 
 <template>
+
   <div class="bg-tertiary text-secondary">
    
 
@@ -53,80 +132,3 @@ experience. </p>
   </div>
 </template>
 
-<script setup lang="ts">
-//@ts-nocheck
-import { ref, onMounted, watch } from 'vue';
-import GameFeature from '../components/GameFeature.vue';
-import { onBeforeRouteLeave, useRoute } from 'vue-router';
-
-const route = useRoute();
-
-const gameInfo = ref<any>({id:'', name: ''});
-
-const gameInfos: any = {
-  1 : {
-    name: "Roleta Ao vivo",
-    id: "85fd764e-72aa-40a0-b865-cac69725870b"
-  },
-  2: {
-    name: "Bingo",
-    id: "936e2f50-d607-4dd7-8088-57af0218137a",
-  },
-  3: {
-    name: "Roda",
-    id: "2dfe08e8-f41d-40d3-992d-ecbc8eddf665"
-  }
-}
-
-watch(
-  () => route.params,
-  (toParams) => createNanoPlayer(toParams.id)
-);
-
-
-onMounted(() => {
-  createNanoPlayer(route.params.id)
-})
-
-const createNanoPlayer = (id: any) => {
-  
-  gameInfo.value = gameInfos[id]
-
-  var config = {
-	"source": {
-		"group": {
-			"id": gameInfo.value.id,
-			"apiurl": "https://bintu.nanocosmos.de"
-		},
-		"options": {
-			"adaption": {
-				"rule": "deviationOfMean2"
-			}
-		},
-		"startIndex": 0
-	},
-	"playback": {
-		"latencyControlMode": "classic",
-		"autoplay": true,
-		"automute": true,
-		"faststart": true
-	},
-	"style": {
-		"width": "auto",
-		"height": "auto",
-    "controls": false,
-	},
-
-};
-
-    var player = new window.NanoPlayer("playerDiv");
-    player.setup(config).then(function (config: any) {
-        console.log("setup success");
-        console.log("config: " + JSON.stringify(config, undefined, 4));
-    }, function (error: any) {
-        alert(error.message);
-    });
-}
-
-
-</script>
