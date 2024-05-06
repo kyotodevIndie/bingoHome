@@ -6,7 +6,7 @@ import Button from './Button.vue';
 
 const closeDrawer = () => {
   const drawer = document.getElementById('drawer-right');
-  if (drawer) {
+  if (drawer instanceof HTMLInputElement) {
     drawer.checked = false;
   }
 }
@@ -53,7 +53,7 @@ const closeDrawer = () => {
         <label for="drawer-right" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
 	<section class="menu-section">
 		<ul class="menu-items">
-			<li class="menu-item">Home</li>
+			<li class="menu-item"  @click="closeDrawer" >Home</li>
 			<li>
 				<input type="checkbox" id="menu-1" class="menu-toggle" />
 				<label class="menu-item justify-between" for="menu-1">
