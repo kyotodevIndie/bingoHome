@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ContactCard from '../components/ContactCard.vue';
+
 </script>
 
 <template>

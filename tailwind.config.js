@@ -2,7 +2,7 @@
 export default {
   content: ["./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./node_modules/flowbite/**/*.js"
+    // "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -11,6 +11,7 @@ export default {
         secondary: '#FCFCFC',
         tertiary: '#151415',
         black: '#000',
+
         gray: {
           100: '#E4E4E4',
           200: '#fcfcfc',
@@ -23,11 +24,6 @@ export default {
           900: '#141415',
           1000: 'rgba(251, 252, 252, 0.8)',
         },
-        darkgray: '#b2b2b2',
-        darkslateblue: {
-          100: '#383367',
-          200: '#2e2a57',
-        },
 
       },
       fontFamily: {
@@ -36,15 +32,29 @@ export default {
         roboto: 'Roboto',
         bungee: 'Bungee',
       },
-      borderRadius: {
-        '10xs': '3px',
-        '3xs': '10px',
-      },
+
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ]
-
+  plugins: [require("rippleui")],
+  rippleui: {
+    themes: [
+      {
+        themeName: "light",
+        colorScheme: "light",
+        colors: {
+          primary: "#FEAD04",
+          backgroundPrimary: "#151415",
+        },
+      },
+      {
+        themeName: "dark",
+        colorScheme: "dark",
+        colors: {
+          primary: "#FEAD04",
+          backgroundPrimary: "#151415",
+        },
+      },
+    ],
+  },
 }
 

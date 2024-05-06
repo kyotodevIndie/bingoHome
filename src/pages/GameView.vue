@@ -55,17 +55,13 @@ experience. </p>
 
 <script setup lang="ts">
 //@ts-nocheck
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import GameFeature from '../components/GameFeature.vue';
-import { useRoute } from 'vue-router';
+import { onBeforeRouteLeave, useRoute } from 'vue-router';
 
 const route = useRoute();
 
 const gameInfo = ref<any>({id:'', name: ''});
-
-
-
-
 
 const gameInfos: any = {
   1 : {
@@ -82,9 +78,18 @@ const gameInfos: any = {
   }
 }
 
+watch(
+  () => route.params,
+  (toParams) => createNanoPlayer(toParams.id)
+);
+
 
 onMounted(() => {
-const id: any = route.params.id
+  createNanoPlayer(route.params.id)
+})
+
+const createNanoPlayer = (id: any) => {
+  
   gameInfo.value = gameInfos[id]
 
   var config = {
@@ -121,7 +126,7 @@ const id: any = route.params.id
     }, function (error: any) {
         alert(error.message);
     });
-})
+}
 
 
 </script>

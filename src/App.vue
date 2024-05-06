@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import BackToTopButton from './components/BackToTopButton.vue'
 </script>
 
 <template>
-
   <Navbar />
   <RouterView />
   <Footer />
+  <BackToTopButton />
 </template>
 
 <style scoped>

@@ -11,14 +11,17 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "flowbite": "^2.3.0",
+    "rippleui": "^1.12.1",
     "tailwind-merge": "^2.3.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
+    "@iconify/vue": "^4.1.2",
     "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
+    "eslint": "^9.2.0",
     "eslint-plugin-vue": "^9.25.0",
     "globals": "^15.1.0",
     "postcss": "^8.4.38",

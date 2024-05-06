@@ -1,23 +1,21 @@
 <template>
   <a
     :class="cn(
-        'no-underline w-fit px-8 py-5 font-bold bg-primary rounded text-zinc-50 cursor-pointer hover:bg-primary/80',
+        'w-fit btn btn-primary font-bold rounded text-zinc-50 cursor-pointer hover:bg-primary/80',
         className,
       )"
     :href="props.href"
   >
-  {{props.label}}
+  <slot></slot>
   </a>
 </template>
 
 <script setup lang="ts">
 import { cn } from "../utils/cn";
-import { defineProps } from 'vue';
 
 const props = defineProps({
   className: String,
   href: String,
-  label: String,
 });
 
 

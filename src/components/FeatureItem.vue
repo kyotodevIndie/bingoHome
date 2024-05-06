@@ -9,7 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
 
 const {imageSrc, title, description} = defineProps({
   imageSrc: String,

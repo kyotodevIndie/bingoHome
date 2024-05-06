@@ -29,12 +29,13 @@
             your disposal and will be glad to answer all your
             questions regarding
           </p>
-          <a
-            href="#"
-            class="rounded bg-primary py-[1.187rem] px-[1.937rem] no-underline font-semibold hover:bg-primary/80"
+          <RouterLink 
+            :to="{ name: 'contact' }"
           >
-            Request demo
-          </a>
+            <Button class="btn-lg">
+              Request demo
+            </Button>
+          </RouterLink>
         <!-- </div> -->
       </div>
     </div></div>
@@ -42,6 +43,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import Button from './Button.vue';
 
 const gamefeatures = ref([
   {

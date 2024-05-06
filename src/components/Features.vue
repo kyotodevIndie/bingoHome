@@ -1,5 +1,5 @@
 <template>
-  <section class="flex justify-center items-center px-16 py-20 w-full bg-neutral-900 max-md:px-5 max-md:max-w-full">
+  <section class="flex justify-center items-center px-16 py-20 w-full bg-tertiary max-md:px-5 max-md:max-w-full">
     <div class="flex flex-col mt-9 max-w-full w-[1089px]">
       <h2 class="text-6xl tracking-wider text-gray-50 leading-[76.2px] max-md:max-w-full max-md:text-4xl font-bungee">
         Why Banana Games?
@@ -18,7 +18,7 @@
         <div class="flex gap-5 max-md:flex-col max-md:gap-0">
           <FeatureItem v-for="(item, index) in featureItems.slice(4)" :key="index" :imageSrc="item.imageSrc" :title="item.title" :description="item.description" />
           <div class="flex flex-col ml-5 w-[51%] max-md:ml-0 max-md:w-full">
-            <div class="flex flex-col grow mt-2.5 text-base mapdx-md:mt-10 max-md:max-w-full">
+            <div class="flex flex-col gap-4  mt-2.5 text-base ">
               <h3 class="text-4xl leading-10 text-zinc-50 max-md:max-w-full font-roboto">
                 Become a Partner
               </h3>
@@ -28,9 +28,12 @@
                 Modifying existing content or creating a new content from
                 scratch.
               </p>
-              <Button class="mt-10" href="/contact">
-                Get in touch
-              </Button>
+              <a
+                href="#"
+                class="w-fit rounded bg-primary py-[1.187rem] px-[1.937rem] no-underline font-semibold hover:bg-primary/80 text-secondary"
+              >
+              Get in touch
+              </a>
             </div>
           </div>
         </div>
@@ -40,7 +43,6 @@
 </template>
 
 <script setup lang="ts">
-import Button from './Button.vue';
 import FeatureItem from './FeatureItem.vue';
 
 const featureItems = [

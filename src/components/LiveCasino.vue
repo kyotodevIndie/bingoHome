@@ -1,8 +1,8 @@
 <template>
   <div
-    class="bg-[url('/banana1Bg.svg')] bg-contain bg-no-repeat bg-bottom bg-black flex flex-col w-full px-12 md:px-24 py-12"
+    class="bg-[url('/banana1Bg.svg')] bg-contain bg-no-repeat bg-bottom bg-black flex flex-col w-full px-12 md:px-24 py-12 justify-center items-center"
   >
-    <header class="flex flex-col md:ml-72 max-w-full text-gray-50 w-[632px]">
+    <header class="flex flex-col w-full lg:w-1/2">
       <h1 class="text-6xl tracking-wider leading-[75.52px] max-md:max-w-full max-md:text-4xl font-bungee">
         Live Casino
       </h1>
@@ -13,11 +13,11 @@
       </p>
     </header>
     <section class="mt-14 max-md:mt-10 max-md:max-w-full">
-      <div class="flex gap-6 max-md:flex-col max-md:gap-0">
+      <div class="flex gap-6 max-md:flex-col max-md:gap-0 items-center justify-center">
         <GameCard v-for="(game, index) in games" :key="index" v-bind="game" />
-      </div>
+      </div>   
     </section>
-    <section class="flex flex-col justify-center self-center px-20 py-16 mt-14 max-w-full text-base text-gray-50 bg-neutral-900 rounded-lg w-[1110px] max-md:px-5 max-md:mt-10">
+    <section class="flex flex-col justify-center self-center px-20 py-16 mt-14 max-w-full text-base text-gray-50 bg-tertiary rounded-lg w-[1200px] max-md:px-5 max-md:mt-10">
       <h3 class="leading-[215%] max-md:mr-1.5 max-md:max-w-full font-roboto">
         Premium HD video quality combined with the most attractive dealers around.
       </h3>
@@ -39,7 +39,7 @@ const games = ref([
     description:
       'Our roulette is based on the traditional European form, with a 37-number wheel and a single zero.',
     imageSrc:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/a8614897010fae843ce303aac24e94eb17883815b87eeaa9b2cffd75662ebd58?apiKey=1c64a5536cb84c2d95c98300c1c7a69b&',
+      '/roletaBgCard.png',
     imageAlt: 'Roulette game table',
   },
   {
@@ -48,7 +48,7 @@ const games = ref([
     description:
     'Our roulette is based on the traditional European form, with a 37-number wheel and a single zero.',
     imageSrc:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/268e4957639a78b290de6efc6f536aad21a6871d990512ee5cc28dff188eb5d7?apiKey=1c64a5536cb84c2d95c98300c1c7a69b&',
+      '/bingoBgCard.png',
     imageAlt: 'Bingo game',
   },
   {
@@ -58,7 +58,7 @@ const games = ref([
     'Our roulette is based on the traditional European form, with a 37-number wheel and a single zero.',
 
     imageSrc:
-      'https://cdn.builder.io/api/v1/image/assets/TEMP/351109fdaa3244f4d3f2ef7ed7ff6e0970b5d004901b7b43b70af17e038ebff4?apiKey=1c64a5536cb84c2d95c98300c1c7a69b&',
+      '/rodaBgCard.png',
     imageAlt: 'roda Game',
   },
 ]);
