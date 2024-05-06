@@ -18,7 +18,7 @@ const closeDrawer = () => {
       <img src="/BananaLogo.svg" class="w-36" alt="BananaGomes Logo" />
     </RouterLink>
 
-		<RouterLink to="/" class="navbar-item border-b-primary rounded-none hover:border-b-2">Home</RouterLink>
+		<RouterLink :to="{ name: 'home' }" class="navbar-item border-b-primary rounded-none hover:border-b-2">Home</RouterLink>
 
 		<div class="dropdown-container justify-center">
       <div class="dropdown dropdown-hover">
@@ -53,7 +53,7 @@ const closeDrawer = () => {
         <label for="drawer-right" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
 	<section class="menu-section">
 		<ul class="menu-items">
-			<li class="menu-item"  @click="closeDrawer" >Home</li>
+			<li class="menu-item" @click="closeDrawer" :to="{ name: 'home' }" >Home</li>
 			<li>
 				<input type="checkbox" id="menu-1" class="menu-toggle" />
 				<label class="menu-item justify-between" for="menu-1">
